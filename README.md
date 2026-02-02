@@ -26,7 +26,7 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 
 ### 1. Searched the `DeviceFileEvents` Table
 
-Searched the DeviceFileEvents table for any file that had the string "tor" in it and discovered what looks like the user "employee" downloaded a tor installer, did something that resulted in many tor-related files being copied to the desktop and the creation of a file called "tor-shopping-list.txt" on the desktop at 2026-01-21T13:51:25.9295279Z. These events began at : (2026-01-21T12:39:06.4671489Z)
+Searched the DeviceFileEvents table for any file that had the string "tor" in it and discovered what looks like the user "test-v1" downloaded a tor installer, did something that resulted in many tor-related files being copied to the desktop and the creation of a file called "tor-shopping-list.txt" on the desktop at 2026-01-21T13:51:25.9295279Z. These events began at : (2026-01-21T12:39:06.4671489Z)
 
 **Query used to locate events:**
 
@@ -39,7 +39,8 @@ DeviceFileEvents
 | order by Timestamp desc
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/71402e84-8767-44f8-908c-1805be31122d">
+<img width="3476" height="934" alt="image" src="https://github.com/user-attachments/assets/3da1fc45-836a-46c5-9792-555b2c33948f" />
+
 
 ---
 
@@ -58,7 +59,8 @@ DeviceProcessEvents
 |where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-15.0.4.exe"
 |project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b07ac4b4-9cb3-4834-8fac-9f5f29709d78">
+<img width="3626" height="453" alt="image" src="https://github.com/user-attachments/assets/bfa2cb5e-d2f7-47fe-bf09-47dca39dcbeb" />
+
 
 ---
 
@@ -76,7 +78,8 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 | order by Timestamp desc
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/b13707ae-8c2d-4081-a381-2b521d3a0d8f">
+<img width="3043" height="1417" alt="image" src="https://github.com/user-attachments/assets/fae7629d-ca2f-46f2-9d5c-3ba9d903257a" />
+
 
 ---
 
@@ -95,7 +98,8 @@ DeviceNetworkEvents
 | where RemotePort in ("9050", "9150", "9051", "9001", "9030", "9052")
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName, InitiatingProcessFolderPath
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/87a02b5b-7d12-4f53-9255-f5e750d0e3cb">
+<img width="3747" height="423" alt="image" src="https://github.com/user-attachments/assets/849f2894-ab45-4543-9b5b-3dc07c430469" />
+
 
 ---
 
@@ -146,6 +150,6 @@ Confirmed intentional installation and active use of Tor Browser for anonymized 
 
 ## Response Taken
 
-TOR usage was confirmed on the endpoint `threat-hunt-lab` by the user `employee`. The device was isolated, and the user's direct manager was notified.
+TOR usage was confirmed on the endpoint `tp--tp--tp` by the user `test-v1`. The device was isolated, and the user's direct manager was notified.
 
 ---
