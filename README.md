@@ -104,53 +104,111 @@ DeviceNetworkEvents
 
 ---
 
-## Chronological Event Timeline 
+Of course — here’s the **same cleaned, professional version**, with **all emojis removed** and formatting kept crisp and SOC-ready.
 
-### 1. 12:38:41 – The file `tor-browser-windows-x86_64-portable-15.0.4.exe` is executed from the Downloads folder, indicating the Tor Browser portable package was launched for the first time.
+---
 
-### 2.  12:39:06 – 12:41:27 – A large number of **Tor-related files** are created on the Desktop under a new _Tor Browser_ folder structure.
-    
-    - Includes `tor.exe`, Tor configuration files, launcher components, and browser support files.
-        
-    - A desktop shortcut **“Tor Browser.lnk”** is also created, confirming setup completion.
+## Chronological Event Timeline
 
-### 3. 12:41:17 – 12:41:27 – Multiple Tor Browser processes start:
-    
-    - `tor.exe` launches (Tor network service)
-        
-    - `firefox.exe` launches (Tor Browser UI)
-        
-    - Several sandboxed `firefox.exe -contentproc` child processes appear (browser tabs)
+### **1. Initial Execution**
 
-### 4. 12:41:55 – The Tor process at  
-    C:\Users\Test-V1\Desktop\Tor Browser\Browser\TorBrowser\Tor\tor.exe 
-    makes a successful outbound connection to **37.114.53.9 over port 9001**, which is consistent with communication to a Tor relay node.
+**12:38:41**
 
-### 5. 12:48:44 – The original Tor installer executable is **deleted** from the Downloads folder, removing the initial artifact.
-    
+* The file `tor-browser-windows-x86_64-portable-15.0.4.exe` is executed from the **Downloads** folder, indicating the Tor Browser portable package was launched for the first time.
 
-### 6. 13:39:22 – 13:40:16 – The Tor installer executable is run again from Downloads, suggesting a second launch or re-execution of the portable package.
+---
 
-### 7. 13:40:27 onward – Tor Browser processes (`firefox.exe`, `tor.exe`, and multiple content processes) appear again, confirming the browser was reopened and actively used.
+### **2. Tor Browser File Deployment**
 
-### 8. 13:51:25 – A file named `tor-shopping-list.txt` is created in the user’s Documents folder, followed shortly by a shortcut (`.lnk`) reference. This indicates user activity occurring during the Tor session.
+**12:39:06 – 12:41:27**
 
+* A large number of Tor-related files are created on the **Desktop** under a new *Tor Browser* directory.
+* Files include:
 
+  * `tor.exe`
+  * Tor configuration files
+  * Launcher components
+  * Browser support files
+* A desktop shortcut `Tor Browser.lnk` is created, confirming successful setup.
+
+---
+
+### **3. Tor Browser Process Startup**
+
+**12:41:17 – 12:41:27**
+
+* Multiple Tor Browser processes are launched:
+
+  * `tor.exe` (Tor network service)
+  * `firefox.exe` (Tor Browser user interface)
+  * Multiple sandboxed `firefox.exe -contentproc` child processes (active browser tabs)
+
+---
+
+### **4. Tor Network Connectivity**
+
+**12:41:55**
+
+* The Tor service executable located at:
+
+  ```
+  C:\Users\Test-V1\Desktop\Tor Browser\Browser\TorBrowser\Tor\tor.exe
+  ```
+
+  establishes a successful outbound connection to **37.114.53.9 over port 9001**, consistent with Tor relay communication.
+
+---
+
+### **5. Installer Artifact Removal**
+
+**12:48:44**
+
+* The original Tor installer executable is deleted from the **Downloads** folder, removing the initial installation artifact.
+
+---
+
+### **6. Re-Execution of Tor Installer**
+
+**13:39:22 – 13:40:16**
+
+* The Tor installer executable is executed again from the **Downloads** folder, suggesting a second launch or reinitialization of the portable package.
+
+---
+
+### **7. Continued Tor Browser Usage**
+
+**13:40:27 onward**
+
+* Tor Browser processes (`firefox.exe`, `tor.exe`, and multiple content processes) appear again, confirming the browser was reopened and actively used.
+
+---
+
+### **8. User File Creation During Tor Session**
+
+**13:51:25**
+
+* A file named `tor-shopping-list.txt` is created in the user’s **Documents** folder.
+* A shortcut (`.lnk`) referencing the file is created shortly afterward.
+* This indicates active user interaction during the Tor browsing session.
 
 ---
 
 ## Summary
 
-User test-v1 downloaded and ran the portable Tor Browser, which unpacked and executed directly from the Desktop. The Tor service started, Tor Browser opened with multiple active tabs, and the system established live connections to the Tor network via relay port 9001. The original installer was later deleted, reducing obvious installation traces. The browser was launched again later the same day, during which a document titled “tor-shopping-list.txt” was created, showing active user interaction while Tor was in use.
+User **test-v1** downloaded and executed the portable Tor Browser, which unpacked and ran directly from the Desktop without a traditional installation. The Tor service initiated successfully, Tor Browser launched with multiple active tabs, and the system established live connections to the Tor network via relay port **9001**. The original installer was later deleted, reducing visible installation artifacts. The browser was subsequently relaunched the same day, during which a document titled `tor-shopping-list.txt` was created, confirming user activity while Tor was in use.
 
-## Conclusion: 
+---
 
-Confirmed intentional installation and active use of Tor Browser for anonymized internet access on this device.
+## Conclusion
+
+Intentional installation and active use of Tor Browser for anonymized internet access was confirmed on this device.
 
 ---
 
 ## Response Taken
 
-TOR usage was confirmed on the endpoint `tp--tp--tp` by the user `test-v1`. The device was isolated, and the user's direct manager was notified.
+* Tor usage was confirmed on endpoint `tp--tp--tp` by user `test-v1`.
+* The device was isolated.
+* The user’s direct manager was notified.
 
 ---
