@@ -101,11 +101,6 @@ DeviceNetworkEvents
 ```
 <img width="3747" height="423" alt="image" src="https://github.com/user-attachments/assets/849f2894-ab45-4543-9b5b-3dc07c430469" />
 
-
----
-
-Of course — here’s the **same cleaned, professional version**, with **all emojis removed** and formatting kept crisp and SOC-ready.
-
 ---
 
 ## Chronological Event Timeline
